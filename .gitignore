@@ -1,0 +1,7 @@
+/prefix
+/perl5
+__*
+*.a
+*.dll
+*.exe
+*.moarvm
