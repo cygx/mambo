@@ -11,7 +11,8 @@ class Mambo::Actions is HLL::Actions {}
 
 class Mambo::Compiler is HLL::Compiler {}
 
-sub MAIN(*@ARGS) {
+# should be *@ARGS, but that blows up when precompiled!
+sub MAIN(@ARGS) {
     my $comp := Mambo::Compiler.new();
     $comp.language('mambo');
     $comp.parsegrammar(Mambo::Grammar);

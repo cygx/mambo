@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 #endif
 
     MVMInstance *vm = MVM_vm_create_instance();
-    if(argc > 2) MVM_vm_set_clargs(vm, argc - 2, argv + 2);
+    MVM_vm_set_clargs(vm, argc - 1, argv + 1);
     MVM_vm_set_prog_name(vm, argc > 1 ? argv[1] : "<repl>");
     MVM_vm_set_exec_name(vm, "mambo");
     MVM_vm_set_lib_path(vm, 1, (const char *[]){ NQPLIB });
